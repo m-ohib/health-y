@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- CS9113 = "parameter bliver ikke brugt". Den vises som advarsel (ikke fejl), mens skelettet bliver udfyldt.
+         Når alle TODO'er er lavet, skal der være 0 advarsler. Fjern så denne linje. -->
+    <WarningsNotAsErrors>CS9113</WarningsNotAsErrors>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,34 @@
+@HealthY.Api_HostAddress = http://localhost:5252
+# TIP: Kør "login" først, og kopiér token herind.
+@token = INDSÆT_TOKEN_HER
+
+### Opret bruger
+POST {{HealthY.Api_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{ "email": "birgit@example.com", "password": "hemmelig123", "birthYear": 1947 }
+
+### Log ind
+POST {{HealthY.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{ "email": "birgit@example.com", "password": "hemmelig123" }
+
+### Mine gåture
+GET {{HealthY.Api_HostAddress}}/api/walks
+Authorization: Bearer {{token}}
+
+### Ny gåtur
+POST {{HealthY.Api_HostAddress}}/api/walks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "date": "2026-10-09", "minutes": 20, "steps": null, "note": "Gik ved stranden" }
+
+### Ugens tal
+GET {{HealthY.Api_HostAddress}}/api/summary/week
+Authorization: Bearer {{token}}
+
+### Dagens ret
+GET {{HealthY.Api_HostAddress}}/api/recipes/today
+Authorization: Bearer {{token}}

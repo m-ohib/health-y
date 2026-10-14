@@ -1,0 +1,46 @@
+/* Grundregler fra kravene: brødtekst mindst 18 px, kontrast mindst 4,5:1, knapper mindst 44 × 44 px. */
+:root {
+  --color-text: #1a1a1a;
+  --color-background: #ffffff;
+  --color-focus: #005fcc;
+  --font-size-body: 1.25rem; /* 20 px */
+  --min-touch-size: 44px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--font-size-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  min-height: var(--min-touch-size);
+}
+
+button {
+  min-width: var(--min-touch-size);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
