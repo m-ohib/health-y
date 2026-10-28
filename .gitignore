@@ -482,3 +482,6 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Interne reviews (indeholder åbne sikkerhedsfund – må ikke være offentlige)
+docs/review/
