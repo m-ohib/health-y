@@ -12,8 +12,8 @@ param sqlAdminLogin string
 @description('Object id på samme person')
 param sqlAdminObjectId string
 
-@description('GitHub-repo, der må deploye: ejer/navn')
-param githubRepo string = 'm-ohib/health-y'
+@description('GitHub-repo, der må deploye: ejer@ejer-id/navn@repo-id (GitHubs uforanderlige format)')
+param githubRepo string = 'm-ohib@203821381/health-y@1419062556'
 
 @description('Egne domæner, der må bruges som Host-header')
 param customHostNames array = ['health-y.dk', 'www.health-y.dk']

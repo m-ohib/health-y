@@ -103,6 +103,17 @@ Køres med `sqlcmd --authentication-method ActiveDirectoryAzCli` som SQL-adminis
 
 ---
 
+## Fejlen ved første deploy (OIDC-subject)
+Første automatiske deploy fejlede med `AADSTS700213: No matching federated identity record found`.
+
+| Azure forventede | GitHub sendte |
+|---|---|
+| `repo:m-ohib/health-y:ref:refs/heads/main` | `repo:m-ohib@203821381/health-y@1419062556:ref:refs/heads/main` |
+
+GitHub sætter nu de faste id'er for ejer og repo ind i tokenet. Det er mere sikkert: hvis repoet blev slettet, og en anden oprettede et med samme navn, får de ikke adgang. Løsning: `githubRepo` i Bicep bruger det nye format.
+
+**Lærdom:** Læs fejlbeskeden helt. Den viste præcis, hvad GitHub sendte.
+
 ## GitHub-variabler
 Under *Settings → Secrets and variables → Actions → Variables*: `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID`. De er id'er, ikke hemmeligheder. Uden dem springes deploy over.
 
