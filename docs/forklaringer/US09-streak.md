@@ -101,7 +101,7 @@ return new StreakResult(current, best, walkedToday);
 ```csharp
 private static readonly DateOnly Today = new DateOnly(2026, 10, 27);
 ```
-**Hvorfor en fast dato?** Testene skal give samme resultat hver gang, uanset hvornår de køres (de skal være *deterministiske*). Brugte vi den rigtige dato, ville "i går = 26/10" være forkert i morgen. Samme grund til, at services bruger `TimeProvider` og aldrig `DateTime.Now`.
+**Hvorfor en fast dato?** Testene skal give samme resultat hver gang, uanset hvornår de køres (de skal være *deterministiske*). Brugte vi den rigtige dato, ville "i går = 26/10" være forkert i morgen. Samme grund til, at services får tiden fra `IClock` og aldrig bruger `DateTime.Now`.
 
 **Arrange, Act, Assert**
 - **Arrange:** forbered data

@@ -2,26 +2,21 @@ using HealthY.Core.Steps;
 
 namespace HealthY.Tests.Steps;
 
-/// <summary>
-/// US 13.
-/// </summary>
-// TIP: Fjern Skip = "TODO", når du skriver testen. Skippede tests vises gule i Test Explorer, så du kan se, hvad der mangler.
-// TIP: Navngivning: Metode_Situation_ForventetResultat. Én ting testes per test.
 public class StepEstimatorTests
 {
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Estimate_TenMinutes_Returns900()
     {
-        // Arrange
-        // Act
-        // Assert
+        var estimator = new StepEstimator();
+        var result = estimator.Estimate(10);
+        Assert.Equal(900, result);
     }
 
-    [Fact(Skip = "TODO")]
+    [Fact]
     public void Estimate_ZeroMinutes_ReturnsZero()
     {
-        // Arrange
-        // Act
-        // Assert
+        var estimator = new StepEstimator();
+        var result = estimator.Estimate(0);
+        Assert.Equal(0, result);
     }
 }
