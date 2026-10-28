@@ -167,6 +167,5 @@ output appName string = app.name
 output sqlServerName string = sqlServer.name
 output sqlServerFqdn string = sqlServer.properties.fullyQualifiedDomainName
 output databaseName string = databaseName
-output environmentStaticIp string = env.properties.staticIp
 output environmentVerificationId string = app.properties.customDomainVerificationId
 output deployClientId string = deployIdentity.properties.clientId
