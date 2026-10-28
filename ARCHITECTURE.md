@@ -17,7 +17,7 @@ Alle pile peger ind mod **Core**. Core afhænger ikke af noget.
 | Projekt | Ansvar | Må indeholde | Må IKKE indeholde |
 |---|---|---|---|
 | **Core** | Forretningslogik | Entiteter, interfaces, services, regler | EF Core, Identity, HTTP, `DateTime.Now`, `Random` direkte |
-| **Infrastructure** | Database, login, ur | DbContext, repositories, Identity, JWT, `DanishClock` | Forretningslogik |
+| **Infrastructure** | Database, login, ur | DbContext, repositories, Identity, JWT, `DanishClock`, `RandomPicker` | Forretningslogik |
 | **Api** | HTTP | Controllers, DTO'er (`Contracts/`), Program.cs | Forretningslogik, DbContext |
 | **Tests** | Unit-tests af Core | Tests, fakes, builders | Database |
 
