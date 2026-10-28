@@ -485,3 +485,6 @@ $RECYCLE.BIN/
 
 # Interne reviews (indeholder åbne sikkerhedsfund – må ikke være offentlige)
 docs/review/
+
+# Vue-build kopieres ind ved container-build
+backend/HealthY.Api/wwwroot/
