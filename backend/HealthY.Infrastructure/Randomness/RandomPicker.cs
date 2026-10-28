@@ -1,4 +1,6 @@
-namespace HealthY.Core.Common;
+using HealthY.Core.Common;
+
+namespace HealthY.Infrastructure.Randomness;
 
 public class RandomPicker : IRandomPicker
 {
