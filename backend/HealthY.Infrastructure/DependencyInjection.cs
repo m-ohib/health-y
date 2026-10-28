@@ -55,6 +55,9 @@ public static class DependencyInjection
         services.AddScoped<IPraiseMessageRepository, PraiseMessageRepository>();
         services.AddScoped<IAccountRepository, AccountRepository>();
 
+        services.AddHealthChecks()
+            .AddDbContextCheck<HealthYDbContext>(tags: [HealthCheckTags.Database]);
+
         return services;
     }
 }
