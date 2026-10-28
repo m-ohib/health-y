@@ -20,7 +20,6 @@ public static class CoreServiceExtensions
         // Rene beregninger uden tilstand kan være Singleton.
         services.AddSingleton<IStreakService, StreakService>();
         services.AddSingleton<IStepEstimator, StepEstimator>();
-        services.AddSingleton<IRandomPicker, RandomPicker>();
 
         // Services, der bruger repositories (og dermed DbContext), skal være Scoped: én per request.
         services.AddScoped<IWalkService, WalkService>();
