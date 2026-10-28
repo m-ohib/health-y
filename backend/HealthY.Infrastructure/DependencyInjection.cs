@@ -8,7 +8,6 @@ using HealthY.Core.Walks;
 using HealthY.Infrastructure.Auth;
 using HealthY.Infrastructure.Data;
 using HealthY.Infrastructure.Identity;
-using HealthY.Infrastructure.Randomness;
 using HealthY.Infrastructure.Repositories;
 using HealthY.Infrastructure.Time;
 using Microsoft.EntityFrameworkCore;
@@ -47,7 +46,6 @@ public static class DependencyInjection
 
         services.AddSingleton(TimeProvider.System);
         services.AddSingleton<IClock, DanishClock>();
-        services.AddSingleton<IRandomPicker, RandomPicker>();
 
         services.AddScoped<IWalkRepository, WalkRepository>();
         services.AddScoped<IGoalRepository, GoalRepository>();
